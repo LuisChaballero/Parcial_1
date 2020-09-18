@@ -1,5 +1,15 @@
-header {
+* {
+  box-sizing: border-box;
+}
 
+header {
+  display: none;
+
+
+}
+
+body {
+ 
 
 }
 
@@ -9,34 +19,48 @@ h2 {
 }
 
 .nav {
-
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  text-align: center;
+  align-items: center ;
+  
 
   }
 
   li {
-
+    border: 2px solid black;
+    margin-top: 100px;
+    padding-right: 100px;
+    padding-left: 100px;
 
   }
 
   .content{
+    display: none;
 
 }
 
   .aside {
+    border: 2px solid black;
 
   }
 
   .slidebox{
+    border: 2px solid black;
+    text-align: center;
 
    
   }
 
   .article{
+    border: 2px solid black;
 
   }
 
 
 .poem{
+  border: 2px solid black;
 
 }
 
@@ -44,30 +68,94 @@ h2 {
 /*Device = Tablets, Ipads (portrait)
   Screen = B/w 600px to 990px*/
   @media (min-width:600px) and (max-width: 990px)  {
-    .article {
+  .nav {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  li {
+    border: 2px solid black;
+    margin-top: 10px;
+    margin-left: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+
+  }
+  .content {
+    display: flex;
+    flex-direction: row;
+    
+  }
+  .aside {
+    width: 30%;
+  }
+
+  .article {
+    width: 70%;
 
   } 
-header{
+  .poem {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+  }
 
 }
+
+/*  Big devices    */
+@media (min-width:991px) {
+
+h2 {
+  border: 2px solid black;
+  width: 33%;
+  text-align: center;
+
 }
 
-/*  Small devices    */
-@media (max-width:599px) {
-
-header,.content{
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 
 }
 
 .nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 
-
-  }
+}
 
 
 .nav > li {
+  padding-right: 65px;
+  padding-left: 65px;
+  margin-top: 0px;
 
 }
+
+
+.content{
+  display: flex;
+  flex-direction: row;
+
+}
+
+.aside {
+  width: 30%;
+}
+
+.article {
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+
+} 
+
 
 
 }
